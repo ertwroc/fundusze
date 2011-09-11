@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-	<ModulePrefs title="hello world example" author="ERt" > 
+	<ModulePrefs title="Notowania funduszy" author="ERt" > 
 		<Require feature="dynamic-height"/>
 		<Require feature="tabs"/>
 		<Require feature="setprefs"/>
