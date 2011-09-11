@@ -7,7 +7,7 @@
 	<UserPref name="months" display_name="Ile ostatnich miesięcy" required="true" />
 	<Content type="html">
 		<![CDATA[
-			<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
 
 			<script type="text/javascript">
 				dojo.require("dojo.date.locale");
@@ -32,7 +32,7 @@
 			</script>
 			Notowania funduszy<br/>
 			<div id="chart"/>
-			<img border="0" alt="XXX" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__.&date_from=2010-09-11&date_to=2011-09-11&period=3" title="Notowanie funduszu XXX" />
+			</div>
 		]]>
 	</Content> 
 </Module>
