@@ -14,7 +14,7 @@
 				function createContent() {
 					var today = new Date();
 					var chartDiv = document.getElementById('chart');
-					var html = '<img border="0" alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__.&date_from=2010-09-11&date_to=' + today.format("yyyy-mm-dd"); + '&period=3" title="Notowanie funduszu XXX" />';
+					var html = '<img border="0" alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__&date_from=2010-09-11&date_to=' + today.format("yyyy-mm-dd") + '&period=3" title="Notowanie funduszu XXX" />';
 					chartDiv.innerHtml = html;
 				}
 				function gadgetLoaded() {
