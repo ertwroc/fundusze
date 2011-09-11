@@ -29,7 +29,7 @@
 					document.getElementById(t2).innerHTML = "Content for tab Two.";
 				}
 				function createTab(tabs, fund, months) {
-					var tabId = tabs.addTab("Notowanie"); 
+					var tabId = tabs.addTab("Notowanie", {callback : resize}); 
 					var html = '<img alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=' + fund + '&period=' + months + '" title="Notowanie funduszu" />';
 					document.getElementById(tabId).innerHTML = html;
 					return tabId;
