@@ -20,7 +20,7 @@
 					var months = prefs.getString("months");
 					var chartDiv = document.getElementById('chart');
 					var html = '<img border="0" alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__&period=' + months + '" title="Notowanie funduszu" />';
-					chartDiv.innerHtml = html;
+					chartDiv.innerHTML = html;
 				}
 				function gadgetLoaded() {
 					dojo.ready(function(){
