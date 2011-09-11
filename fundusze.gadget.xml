@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="hello world example" /> 
-  <Content type="html">
-     <![CDATA[ 
-       Hello, world!
-     ]]>
-  </Content> 
+	<ModulePrefs title="hello world example" /> 
+	<Content type="html">
+		<![CDATA[ 
+			Notowania<br/>
+			<img border="0" alt="XXX" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=3919&date_from=2010-09-11&date_to=2011-09-11&period=3" title="Notowanie funduszu XXX">
+		]]>
+	</Content> 
 </Module>
