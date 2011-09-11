@@ -22,7 +22,7 @@
 					var tabs = new gadgets.TabSet();
 
 					for (var i = 0; i < funds.length ; i++) {
-						createTab(tabs, fund[i], months);
+						createTab(tabs, funds[i], months);
 					}
 					
 					var t2 = tabs.addTab("Two"); 
