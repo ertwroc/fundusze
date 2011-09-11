@@ -4,6 +4,7 @@
 		<Require feature="dynamic-height"/>
 	</ModulePrefs>
 	<UserPref name="funds" display_name="Fundusze" required="true" />
+	<UserPref name="months" display_name="Ile ostatnich miesięcy" required="true" />
 	<Content type="html">
 		<![CDATA[
 			<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
@@ -13,11 +14,12 @@
 				var prefs = new gadgets.Prefs();
 				
 				function resize() {
+					gadgets.window.adjustHeight();
 				}
 				function createContent() {
-					var today = dojo.date.locale.format(new Date(), {datePattern: "yyyy-MM-dd"});
+					var months = prefs.getString("months");
 					var chartDiv = document.getElementById('chart');
-					var html = '<img border="0" alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__&date_from=2010-09-11&date_to=' + today + '&period=3" title="Notowanie funduszu XXX" />';
+					var html = '<img border="0" alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=__UP_funds__&period=' + months + '" title="Notowanie funduszu" />';
 					chartDiv.innerHtml = html;
 				}
 				function gadgetLoaded() {
