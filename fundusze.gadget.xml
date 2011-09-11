@@ -2,9 +2,12 @@
 <Module>
 	<ModulePrefs title="hello world example" author="ERt" > 
 		<Require feature="dynamic-height"/>
+		<Require feature="tabs"/>
+		<Require feature="setprefs"/>
 	</ModulePrefs>
 	<UserPref name="funds" display_name="Fundusze" required="true" />
 	<UserPref name="months" display_name="Ile ostatnich miesięcy" required="true" />
+	<UserPref name="selectedTab" />
 	<Content type="html">
 		<![CDATA[
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
@@ -12,6 +15,14 @@
 			<script type="text/javascript">
 				dojo.require("dojo.date.locale");
 				var prefs = new gadgets.Prefs();
+
+				function createTabs() {
+					var tabs = new gadgets.TabSet();
+					var t1 = tabs.addTab("One"); 
+					document.getElementById(t1).innerHTML = "Content for tab One.";
+					var t2 = tabs.addTab("Two"); 
+					document.getElementById(t2).innerHTML = "Content for tab Two.";
+				}
 				
 				function resize() {
 					gadgets.window.adjustHeight();
@@ -24,7 +35,8 @@
 				}
 				function gadgetLoaded() {
 					dojo.ready(function(){
-						createContent();
+						//createContent();
+						createTabs();
 						resize();
 					});
 				}
