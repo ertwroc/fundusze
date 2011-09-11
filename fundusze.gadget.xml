@@ -53,7 +53,7 @@
 				}
 				gadgets.util.registerOnLoadHandler(gadgetLoaded); 
 			</script>
-			Notowania funduszy<br/>
+			Dane i wykresy pochodzą z <a href="http://www.money.pl/fundusze/archiwum/fundusze/">Money.pl</a><br/>
 			<div id="chart"/>
 			</div>
 		]]>
