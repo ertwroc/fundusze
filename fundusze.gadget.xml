@@ -5,7 +5,7 @@
 		<Require feature="tabs"/>
 		<Require feature="setprefs"/>
 	</ModulePrefs>
-	<UserPref name="funds" display_name="Fundusze" required="true" />
+	<UserPref name="funds" display_name="Fundusze" required="true" datatype="list" />
 	<UserPref name="months" display_name="Ile ostatnich miesięcy" required="true" />
 	<UserPref name="selectedTab" />
 	<Content type="html">
@@ -17,11 +17,22 @@
 				var prefs = new gadgets.Prefs();
 
 				function createTabs() {
+					var months = prefs.getString("months");
+					var funds = prefs.getArray("funds");
 					var tabs = new gadgets.TabSet();
-					var t1 = tabs.addTab("One"); 
-					document.getElementById(t1).innerHTML = "Content for tab One.";
+
+					for (var i = 0; i < funds.length ; i++) {
+						createTab(tabs, fund[i], months);
+					}
+					
 					var t2 = tabs.addTab("Two"); 
 					document.getElementById(t2).innerHTML = "Content for tab Two.";
+				}
+				function createTab(tabs, fund, months) {
+					var tabId = tabs.addTab("Notowanie"); 
+					var html = '<img alt="Notowanie" src="http://www.money.pl/u/chart_Inwestycyjne2.php?tow=' + fund + '&period=' + months + '" title="Notowanie funduszu" />';
+					document.getElementById(tabId).innerHTML = html;
+					return tabId;
 				}
 				
 				function resize() {
