@@ -21,8 +21,10 @@
 					chartDiv.innerHtml = html;
 				}
 				function gadgetLoaded() {
-					createContent();
-					resize();
+					dojo.ready(function(){
+						createContent();
+						resize();
+					});
 				}
 				gadgets.util.registerOnLoadHandler(gadgetLoaded); 
 			</script>
